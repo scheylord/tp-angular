@@ -1,3 +1,5 @@
+import { appRouteList } from './app.routes';
+import { Router, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -7,27 +9,36 @@ import { LoginComponentComponent } from './home/login-component/login-component.
 import {APIHelper} from './shared/providers/api-helper/api-helper.service'
 import { HttpModule } from '@angular/http';
 import {StorageService} from './shared/providers/storage/storage.service';
-import { PageComponent } from './home/page/page.component';
 import { MenuComponent } from './home/menu/menu.component';
 import { MainComponent } from './home/main/main.component'
 import { UserService } from './service/user.service';
 import { TicketService } from './service/ticket.service';
+import { TicketComponent } from './home/ticket/ticket.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponentComponent,
-    PageComponent,
     MenuComponent,
-    MainComponent
+    MainComponent,
+    TicketComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRouteList) //register routes
   ],
-  providers: [APIHelper, StorageService, UserService, TicketService],
+  providers: [
+    APIHelper,
+    StorageService,
+    UserService,
+    TicketService
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  
+}

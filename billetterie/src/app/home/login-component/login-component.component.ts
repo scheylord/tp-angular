@@ -3,7 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import {User} from '../../model/user'
 import {APIHelper} from '../../shared/providers/api-helper/api-helper.service'
 import { UserService } from '../../service/user.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-component',
@@ -21,7 +21,7 @@ import { UserService } from '../../service/user.service';
 export class LoginComponentComponent implements OnInit {
 
   userConnexion : UserConnexion;
-  constructor(private _apiHelper : APIHelper, private _userService: UserService) {}
+  constructor(private _apiHelper : APIHelper, private _userService: UserService, private _router: Router) {}
 
   ngOnInit() {
     this.userConnexion = new UserConnexion();
@@ -40,6 +40,7 @@ export class LoginComponentComponent implements OnInit {
       } else {
         console.log(data);
         console.log(data.messages);
+        this._router.navigate(['/tickets']);
       }
     });
     
