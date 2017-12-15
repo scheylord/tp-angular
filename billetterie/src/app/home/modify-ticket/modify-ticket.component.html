@@ -4,10 +4,14 @@
   <h2>Modifier le ticket</h2>
   <form #modifyTicketForm="ngForm"
   (ngSubmit)="onSubmit(modifyTicketForm)" novalidate>
-    Nom : <input name="name" [(ngModel)]="ticket.name" required type="text"/><br/>
-    Description : <input name="description" [(ngModel)]="ticket.description" required type="text"/><br/>
-    Url de l'image : <input name="urlImage" [(ngModel)]="ticket.urlImage" required type="text"/><br/>
+    <div>Nom : </div><input name="name" [(ngModel)]="ticket.name" required type="text"/><br/>
+    <div>Description : </div><input name="description" [(ngModel)]="ticket.description" required type="text"/><br/>
+    <div>Url de l'image : </div><input name="urlImage" [(ngModel)]="ticket.urlImage" required type="text"/><br/>
     <app-ticket-compteur></app-ticket-compteur>
-    <button type="submit">Modifier</button>
+
+    <img src="{{ticket.urlImage}}" />
+    <div>
+      <button type="submit">Modifier</button>
+    </div>
   </form>
 </div>

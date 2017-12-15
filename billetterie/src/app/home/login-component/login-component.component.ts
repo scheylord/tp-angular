@@ -1,3 +1,4 @@
+import { StorageService } from './../../shared/providers/storage/storage.service';
 import { UserConnexion } from './../../model/user-connexion';
 import { Component, OnInit, Input } from '@angular/core';
 import {User} from '../../model/user'
@@ -21,7 +22,7 @@ import { Router } from '@angular/router';
 export class LoginComponentComponent implements OnInit {
 
   userConnexion : UserConnexion;
-  constructor(private _apiHelper : APIHelper, private _userService: UserService, private _router: Router) {}
+  constructor(private _apiHelper : APIHelper, private _userService: UserService, private _router: Router, private _storageService : StorageService) {}
 
   ngOnInit() {
     this.userConnexion = new UserConnexion();
@@ -40,6 +41,8 @@ export class LoginComponentComponent implements OnInit {
       } else {
         console.log(data);
         console.log(data.messages);
+        let a = {key: "token", value:data.token};
+        this._storageService.set(a);
         this._router.navigate(['/tickets']);
       }
     });
