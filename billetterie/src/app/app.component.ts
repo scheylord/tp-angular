@@ -15,6 +15,6 @@ export class AppComponent {
       //TODO
   
       //si pas de token, aller sur la page de connexion;
-      this._router.navigate(['/login']);
+      this._router.navigate(['/tickets']);
     }
 }

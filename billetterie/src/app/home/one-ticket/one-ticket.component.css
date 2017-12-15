@@ -1,0 +1,33 @@
+img {
+    width : 200px;
+    height: 100px;
+}
+
+.left {
+    float : left;
+    width: 210px;
+}
+
+.right {
+    float : left;
+    width: 600px;
+}
+
+.clear {
+    clear: both;
+    margin: 40px 0px;
+}
+
+.modifier {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.modifier a {
+    text-decoration: none;
+    background-color: rgb(228, 228, 228);
+    color: black;
+    border: solid 2px rgb(155, 155, 155);
+    border-radius: 2px;
+    padding: 2px 20px;
+}

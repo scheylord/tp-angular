@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './ticket.component.html',
   styleUrls: ['./ticket.component.css']
 })
+
 export class TicketComponent implements OnInit {
 
   constructor() { }

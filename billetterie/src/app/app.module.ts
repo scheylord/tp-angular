@@ -14,6 +14,11 @@ import { MainComponent } from './home/main/main.component'
 import { UserService } from './service/user.service';
 import { TicketService } from './service/ticket.service';
 import { TicketComponent } from './home/ticket/ticket.component';
+import { OneTicketComponent } from './home/one-ticket/one-ticket.component';
+import { AddTicketComponent } from './home/add-ticket/add-ticket.component';
+import { ModifyTicketComponent } from './home/modify-ticket/modify-ticket.component';
+import { ErrorComponent } from './error/error.component';
+import { TicketCompteurComponent } from './home/modify-ticket/ticket-compteur/ticket-compteur.component';
 
 
 
@@ -23,7 +28,12 @@ import { TicketComponent } from './home/ticket/ticket.component';
     LoginComponentComponent,
     MenuComponent,
     MainComponent,
-    TicketComponent
+    TicketComponent,
+    OneTicketComponent,
+    AddTicketComponent,
+    ModifyTicketComponent,
+    ErrorComponent,
+    TicketCompteurComponent
   ],
   imports: [
     BrowserModule,

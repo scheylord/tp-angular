@@ -1,0 +1,18 @@
+<div>
+  <div class="left">
+    <img src="{{ticket.urlImage}}" />
+  </div>
+  <div class="right">
+    <ul>
+      <li>Nom : <strong>{{ticket.name}}</strong></li>
+      <li>Description : {{ticket.description}}</li>
+      <li>Date d'expiration : {{ticket.expiration | date}}</li>
+      <li>Nombre de billets restants : {{ticket.nbLefts}}</li>
+    </ul>
+    <div class="modifier">
+      <a [routerLink]="['/tickets', 'modify', ticket.id]" >Modifier</a>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="clear"></div>

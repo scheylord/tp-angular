@@ -1,3 +1,5 @@
+import { Ticket } from './../../model/ticket';
+import { TicketService } from './../../service/ticket.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  tickets: Ticket[];
+
+  constructor(private _ticketsService : TicketService ) {}
 
   ngOnInit() {
+    this.tickets = this._ticketsService.tickets;
   }
 
 }
